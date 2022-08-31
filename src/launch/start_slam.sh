@@ -2,6 +2,9 @@
 # sudo /usr/local/bin/orin_camera_cfg &
 # run config
 
+# # time sync
+# sudo sh ~/start_as_sync_slave.sh
+
 #ros2 cam for bev
 source ~/fisheye_stitching_shm/install/local_setup.bash
 
@@ -14,20 +17,19 @@ source /home/orin1/qing/dafne/dafne_deploy/dafne_ros/install/local_setup.bash
 
 # #for raw image output
 # # set 25 fps
-# cd ~/Downloads/SY.Orin.Devkit.SGA8-ORIN-GMSL2.L4T-R34.1.1-20221014/docs
-# sudo sh set25fps_SyncSignal.sh
+sudo sh ~/Downloads/SY.Orin.Devkit.SGA8-ORIN-GMSL2.L4T-R34.1.1-20221014/docs/set25fps_SyncSignal.sh
 
-# # time sync
-# cd ~
-# sudo sh ./start_as_sync_slave.sh
+
 
 # start ros cam 
-# source ~/percep/1013cam/install/setup.bash
+source ~/percep/1013cam/install/setup.bash
 
 # start segmentation pipe
-# source ~/percep/ws/install/setup.bash
+source ~/percep/ws/install/setup.bash
 
 #start lanuch files
-ros2 launch ./bev_launch.xml
-#ros2 lanuch /home/levin/workspace/ws_ros2/src/launch/seg_launch.xml
+ros2 launch ./slam_launch.xml
+
+
+# source ~/v_debug/ws_ros2/install/setup.bash
 

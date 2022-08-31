@@ -1,0 +1,4 @@
+<launch>
+  <include file="/home/orin1/v_debug/ws_ros2/src/launch/bev_launch.xml"/>
+  <include file="/home/orin1/v_debug/ws_ros2/src/launch/seg_launch.xml"/>
+</launch>
