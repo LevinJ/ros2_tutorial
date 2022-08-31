@@ -6,4 +6,9 @@ zf_avp/
 build/
 install/
 log/
+src/custom_interfaces/
+src/dafne_interfaces/
+src/novatel_oem7_msgs/
+src/project_msgs/
+src/vehicle_msgs/
 

@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find-pkg-share gscam2)/launch/node_param_launch.py"/>
+  <include file="$(find-pkg-share fisheye_stitching_ros2)/launch/stitching.launch.py"/>
+  <node pkg="dafne" exec="dafne_infer" name="dafne_infer"/>
+</launch>

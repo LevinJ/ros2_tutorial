@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find-pkg-share gscam2)/launch/topics/node_param_launch.py"/>
+  <include file="(find-pkg-share segmentation)/launch/segment.launch.py"/>
+</launch>
