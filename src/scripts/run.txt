@@ -1,0 +1,26 @@
+#same terminal
+
+# in home/frgen,source ros1
+source /opt/ros/noetic/setup.bash
+source /opt/ros/galactic/setup.bash
+source ~/frgen/devel/setup.bash 
+roslaunch novatel_oem7_driver oem7_net.launch
+
+
+source /opt/ros/noetic/setup.bash
+source devel/setup.bash
+roslaunch kvaser_interface es8_only.launch
+
+
+# new terminal, in ros1_bridge_ws
+
+source /opt/ros/noetic/setup.bash
+source /opt/ros/galactic/setup.bash
+source `/ros1_bridge_ws/bridge_ws/install/setup.bash
+ros2 run ros1_bridge dynamic_bridge --bridge-all-1to2-topics
+
+
+
+source /home/diwza/autoware/install/setup.bash 
+ros2 run plotjuggler plotjuggler  
+

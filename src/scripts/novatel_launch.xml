@@ -1,0 +1,4 @@
+<launch>
+  <include file="/home/diwza/frgen/src/novatel_oem7_driver/src/novatel_oem7_driver/launch/oem7_net.launch"/>
+  <include file="/home/diwza/frgen/src/kvaser_interface/launch/es8_only.launch"/>
+</launch>
