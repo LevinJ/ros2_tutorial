@@ -1,0 +1,35 @@
+# start cam driver
+cd /usr/local/bin
+sudo ./orin_camera_cfg
+run config
+light up 'orin' label green button if failed
+
+# set 25 fps
+cd ~/Downloads/SY.Orin.Devkit.SGA8-ORIN-GMSL2.L4T-R34.1.1-20221014/docs
+sudo sh set25fps_SyncSignal.sh
+
+# time sync
+cd ~
+sudo sh ./start_as_sync_slave.sh
+
+# start ros cam 
+cd ~/percep/1013cam
+source install/setup.bash
+ros2 launch gscam2seg node_param_launch.py
+
+# start segmentation pipe
+cd ~/percep/ws
+source install/setup.bash
+
+
+
+source /home/orin1/v_debug/ws_ros2/install/setup.bash
+
+
+ros2 launch segmentation segment.launch.py
+
+is_vis: "True" or "False"
+
+percep/ws/install/segmentation/shared/segmentation/launch/segment.launch.py
+
+
