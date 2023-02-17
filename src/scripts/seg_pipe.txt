@@ -13,13 +13,11 @@ cd ~
 sudo sh ./start_as_sync_slave.sh
 
 # start ros cam 
-cd ~/percep/1013cam
-source install/setup.bash
+source ~/percep/1013cam_md/install/setup.bash
 ros2 launch gscam2seg node_param_launch.py
 
 # start segmentation pipe
-cd ~/percep/ws
-source install/setup.bash
+source ~/percep/ws/install/setup.bash
 
 
 
